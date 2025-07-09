@@ -1,0 +1,162 @@
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\x64\tesseract.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\x86\Tesseract.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\tessdata\configs\config.cfg
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\tessdata\eng.traineddata
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\tessdata\equ.traineddata
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\tessdata\osd.traineddata
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\tessdata\pdf.ttf
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\x86\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\x86\tesseract50.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\x64\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\x64\tesseract50.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\image to text.exe
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\image to text.deps.json
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\image to text.runtimeconfig.json
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\OpenCvSharp.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\Tesseract.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\Tesseract.Drawing.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\Patagames.Ocr.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg4110_64.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4110.dll
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.AssemblyReference.cache
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image_to_text.Form1.resources
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.GenerateResource.cache
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.GeneratedMSBuildEditorConfig.editorconfig
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfoInputs.cache
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfo.cs
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.CoreCompileInputs.cache
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to.6DC5BA7F.Up2Date
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\refint\image to text.dll
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\image to text.genruntimeconfig.cache
+F:\c# görüntü işleme course\image to text\image to text\obj\Debug\net8.0-windows\ref\image to text.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\OpenCvSharp.Extensions.dll
+F:\c# görüntü işleme course\image to text\image to text\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\x64\tesseract.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\x86\Tesseract.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\tessdata\configs\config.cfg
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\tessdata\eng.traineddata
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\tessdata\equ.traineddata
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\tessdata\osd.traineddata
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\tessdata\pdf.ttf
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\x86\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\x86\tesseract50.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\x64\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\x64\tesseract50.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\image to text.exe
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\image to text.deps.json
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\image to text.runtimeconfig.json
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\OpenCvSharp.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\OpenCvSharp.Extensions.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\Tesseract.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\Tesseract.Drawing.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\Patagames.Ocr.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg4110_64.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4110.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.AssemblyReference.cache
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image_to_text.Form1.resources
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.GenerateResource.cache
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.GeneratedMSBuildEditorConfig.editorconfig
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfoInputs.cache
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfo.cs
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.CoreCompileInputs.cache
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to.6DC5BA7F.Up2Date
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\refint\image to text.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image to text.genruntimeconfig.cache
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\ref\image to text.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\bin\Debug\net8.0-windows\MaterialSkin.dll
+F:\c# görüntü işleme course\proje\image to text\image to text\obj\Debug\net8.0-windows\image_to_text.Properties.Resources.resources
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\x64\tesseract.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\x86\Tesseract.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\tessdata\configs\config.cfg
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\tessdata\eng.traineddata
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\tessdata\equ.traineddata
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\tessdata\osd.traineddata
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\tessdata\pdf.ttf
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\x86\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\x86\tesseract50.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\x64\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\x64\tesseract50.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\image to text.exe
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\image to text.deps.json
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\image to text.runtimeconfig.json
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\MaterialSkin.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\OpenCvSharp.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\OpenCvSharp.Extensions.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\Tesseract.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\Tesseract.Drawing.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\Patagames.Ocr.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg4110_64.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4110.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.AssemblyReference.cache
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image_to_text.Form1.resources
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image_to_text.Properties.Resources.resources
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.GenerateResource.cache
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.GeneratedMSBuildEditorConfig.editorconfig
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfoInputs.cache
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfo.cs
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.csproj.CoreCompileInputs.cache
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to.6DC5BA7F.Up2Date
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\refint\image to text.dll
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\image to text.genruntimeconfig.cache
+F:\c# görüntü işleme course\projeV2\image to text\image to text\obj\Debug\net8.0-windows\ref\image to text.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\x64\tesseract.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\x86\Tesseract.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\tessdata\configs\config.cfg
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\tessdata\eng.traineddata
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\tessdata\equ.traineddata
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\tessdata\osd.traineddata
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\tessdata\pdf.ttf
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\x86\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\x86\tesseract50.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\x64\leptonica-1.82.0.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\x64\tesseract50.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\image to text.exe
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\image to text.deps.json
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\image to text.runtimeconfig.json
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\MaterialSkin.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\OpenCvSharp.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\OpenCvSharp.Extensions.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\Tesseract.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\Tesseract.Drawing.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\Patagames.Ocr.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg4110_64.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4110.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.csproj.AssemblyReference.cache
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image_to_text.Form1.resources
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image_to_text.Properties.Resources.resources
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.csproj.GenerateResource.cache
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.GeneratedMSBuildEditorConfig.editorconfig
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfoInputs.cache
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.AssemblyInfo.cs
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.csproj.CoreCompileInputs.cache
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to.6DC5BA7F.Up2Date
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\refint\image to text.dll
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.pdb
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\image to text.genruntimeconfig.cache
+F:\c# görüntü işleme course\ocrProjectCustomParams\image to text\obj\Debug\net8.0-windows\ref\image to text.dll

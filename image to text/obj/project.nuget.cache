@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "2XKlzi2Ih3o=",
+  "success": true,
+  "projectFilePath": "F:\\c# görüntü işleme course\\ocrProjectCustomParams\\image to text\\image to text.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\omer\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\opencvsharp4\\4.11.0.20250507\\opencvsharp4.4.11.0.20250507.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\opencvsharp4.extensions\\4.11.0.20250507\\opencvsharp4.extensions.4.11.0.20250507.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\opencvsharp4.runtime.win\\4.11.0.20250507\\opencvsharp4.runtime.win.4.11.0.20250507.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\system.drawing.common\\8.0.11\\system.drawing.common.8.0.11.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\tesseract\\5.2.0\\tesseract.5.2.0.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\tesseract.drawing\\5.2.0\\tesseract.drawing.5.2.0.nupkg.sha512",
+    "C:\\Users\\omer\\.nuget\\packages\\tesseract.net.sdk\\4.6.411\\tesseract.net.sdk.4.6.411.nupkg.sha512"
+  ],
+  "logs": []
+}
