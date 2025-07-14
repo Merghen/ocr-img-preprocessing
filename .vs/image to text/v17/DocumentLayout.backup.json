@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\",
+  "WorkspaceRootPath": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrprojectcustomparams\\image to text\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|solutionrelative:image to text\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrprojectcustomparams\\image to text\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|solutionrelative:image to text\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrprojectcustomparams\\image to text\\imagezoomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\imagezoomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|solutionrelative:image to text\\imagezoomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrprojectcustomparams\\image to text\\customparampreprocces\\customparmpreprocces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\customparampreprocces\\customparmpreprocces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|solutionrelative:image to text\\customparampreprocces\\customparmpreprocces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrprojectcustomparams\\image to text\\customparampreprocces\\paramoptimization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|f:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\customparampreprocces\\paramoptimization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40D5E3E2-7183-4039-BF0F-962FBF23EB6E}|image to text\\image to text.csproj|solutionrelative:image to text\\customparampreprocces\\paramoptimization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -36,11 +36,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\Form1.cs",
+              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\Form1.cs",
               "RelativeDocumentMoniker": "image to text\\Form1.cs",
-              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\Form1.cs",
+              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\Form1.cs",
               "RelativeToolTip": "image to text\\Form1.cs",
-              "ViewState": "AgIAACcBAAAAAAAAAAAiwEMBAABRAAAAAAAAAA==",
+              "ViewState": "AgIAACcBAAAAAAAAAAAiwDsBAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T11:08:09.527Z",
               "IsPinned": true,
@@ -50,34 +50,32 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ImageZoomController.cs",
-              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\ImageZoomController.cs",
+              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\ImageZoomController.cs",
               "RelativeDocumentMoniker": "image to text\\ImageZoomController.cs",
-              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\ImageZoomController.cs",
+              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\ImageZoomController.cs",
               "RelativeToolTip": "image to text\\ImageZoomController.cs",
               "ViewState": "AgIAAIEAAAAAAAAAAAAowKYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T18:49:33.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T18:49:33.365Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Tasar\u0131m]",
-              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\Form1.cs",
+              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\Form1.cs",
               "RelativeDocumentMoniker": "image to text\\Form1.cs",
               "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\Form1.cs [Tasar\u0131m]",
-              "RelativeToolTip": "image to text\\Form1.cs [Tasar\u0131m]",
+              "RelativeToolTip": "..\\ocrProjectCustomParams\\image to text\\Form1.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T11:04:29.117Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2025-06-24T11:04:29.117Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ParamOptimization.cs",
-              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\CustomParamPreprocces\\ParamOptimization.cs",
+              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\CustomParamPreprocces\\ParamOptimization.cs",
               "RelativeDocumentMoniker": "image to text\\CustomParamPreprocces\\ParamOptimization.cs",
-              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\CustomParamPreprocces\\ParamOptimization.cs",
+              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\CustomParamPreprocces\\ParamOptimization.cs",
               "RelativeToolTip": "image to text\\CustomParamPreprocces\\ParamOptimization.cs",
               "ViewState": "AgIAAIgAAAAAAAAAAAAswOQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -87,14 +85,13 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "CustomParmPreprocces.cs",
-              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\CustomParamPreprocces\\CustomParmPreprocces.cs",
+              "DocumentMoniker": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\CustomParamPreprocces\\CustomParmPreprocces.cs",
               "RelativeDocumentMoniker": "image to text\\CustomParamPreprocces\\CustomParmPreprocces.cs",
-              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocrProjectCustomParams\\image to text\\CustomParamPreprocces\\CustomParmPreprocces.cs",
+              "ToolTip": "F:\\c# g\u00F6r\u00FCnt\u00FC i\u015Fleme course\\ocr-img-preprocessing\\image to text\\CustomParamPreprocces\\CustomParmPreprocces.cs",
               "RelativeToolTip": "image to text\\CustomParamPreprocces\\CustomParmPreprocces.cs",
               "ViewState": "AgIAAIkAAAAAAAAAAAAYwHIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:14:40.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:14:40.456Z"
             }
           ]
         }

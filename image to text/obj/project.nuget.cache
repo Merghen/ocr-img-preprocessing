@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2XKlzi2Ih3o=",
+  "dgSpecHash": "DKmRI9wPNvM=",
   "success": true,
-  "projectFilePath": "F:\\c# görüntü işleme course\\ocrProjectCustomParams\\image to text\\image to text.csproj",
+  "projectFilePath": "F:\\c# görüntü işleme course\\ocr-img-preprocessing\\image to text\\image to text.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\omer\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",
     "C:\\Users\\omer\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",

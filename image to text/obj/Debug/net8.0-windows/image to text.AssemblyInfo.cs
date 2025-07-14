@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("image to text")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+501f0f56c9d948c0f3de232c583c9339dea8b574")]
 [assembly: System.Reflection.AssemblyProductAttribute("image to text")]
 [assembly: System.Reflection.AssemblyTitleAttribute("image to text")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\c# görüntü işleme course\\ocrProjectCustomParams\\image to text\\image to text.csproj": {}
+    "F:\\c# görüntü işleme course\\ocr-img-preprocessing\\image to text\\image to text.csproj": {}
   },
   "projects": {
-    "F:\\c# görüntü işleme course\\ocrProjectCustomParams\\image to text\\image to text.csproj": {
+    "F:\\c# görüntü işleme course\\ocr-img-preprocessing\\image to text\\image to text.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\c# görüntü işleme course\\ocrProjectCustomParams\\image to text\\image to text.csproj",
+        "projectUniqueName": "F:\\c# görüntü işleme course\\ocr-img-preprocessing\\image to text\\image to text.csproj",
         "projectName": "image to text",
-        "projectPath": "F:\\c# görüntü işleme course\\ocrProjectCustomParams\\image to text\\image to text.csproj",
+        "projectPath": "F:\\c# görüntü işleme course\\ocr-img-preprocessing\\image to text\\image to text.csproj",
         "packagesPath": "C:\\Users\\omer\\.nuget\\packages\\",
-        "outputPath": "F:\\c# görüntü işleme course\\ocrProjectCustomParams\\image to text\\obj\\",
+        "outputPath": "F:\\c# görüntü işleme course\\ocr-img-preprocessing\\image to text\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
