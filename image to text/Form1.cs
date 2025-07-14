@@ -18,30 +18,30 @@ namespace image_to_text
 
     public partial class Form1 : Form
     {
-        // global değişkenleri tanımlıyorum
+        // global deÄŸiÅŸkenleri tanÄ±mlÄ±yorum
         Utilities util = new Utilities();
         Mat img = new Mat();
-        List<Mat> ApprovedImages = new List<Mat>(); // Kullanıcının onayladığı OCR için hazır resimleri saklamak için liste
-        List<Mat> UnReadyImages = new List<Mat>(); // Kullanıcının seçtiği görselleri ekranda gösteren ancak ocr için hazır olmayan resimleri saklamak için liste
-        String OrcResult; // OCR sonuçlarını saklamak için kullanılan string değişken
-        string preproccesMethod; //seçilen önişleme adımına ait bilgiyi tutan değişken
+        List<Mat> ApprovedImages = new List<Mat>(); // KullanÄ±cÄ±nÄ±n onayladÄ±ÄŸÄ± OCR iÃ§in hazÄ±r resimleri saklamak iÃ§in liste
+        List<Mat> UnReadyImages = new List<Mat>(); // KullanÄ±cÄ±nÄ±n seÃ§tiÄŸi gÃ¶rselleri ekranda gÃ¶steren ancak ocr iÃ§in hazÄ±r olmayan resimleri saklamak iÃ§in liste
+        String OrcResult; // OCR sonuÃ§larÄ±nÄ± saklamak iÃ§in kullanÄ±lan string deÄŸiÅŸken
+        string preproccesMethod; //seÃ§ilen Ã¶niÅŸleme adÄ±mÄ±na ait bilgiyi tutan deÄŸiÅŸken
 
-        ParamOptimization paramOptimization = new ParamOptimization(); // ön işleme adımlarını yaptığım sınıfın örneği
-        int currentImageIndex = 0; // önişleme işleminin yapıldığı güncel görüntü indeksini tutan değişken
-        CustomPreprocessParams customParams = new CustomPreprocessParams(); // önişlemelere ait parametreleri tutan sınıfın örneği
+        ParamOptimization paramOptimization = new ParamOptimization(); // Ã¶n iÅŸleme adÄ±mlarÄ±nÄ± yaptÄ±ÄŸÄ±m sÄ±nÄ±fÄ±n Ã¶rneÄŸi
+        int currentImageIndex = 0; // Ã¶niÅŸleme iÅŸleminin yapÄ±ldÄ±ÄŸÄ± gÃ¼ncel gÃ¶rÃ¼ntÃ¼ indeksini tutan deÄŸiÅŸken
+        CustomPreprocessParams customParams = new CustomPreprocessParams(); // Ã¶niÅŸlemelere ait parametreleri tutan sÄ±nÄ±fÄ±n Ã¶rneÄŸi
         ImageZoomController zoomController;
-        List<ICustomParmPreprocces> appliedSteps = new List<ICustomParmPreprocces>(); // Kullanıcının onayladığı ön işleme adımlarını saklamak için list
+        List<ICustomParmPreprocces> appliedSteps = new List<ICustomParmPreprocces>(); // KullanÄ±cÄ±nÄ±n onayladÄ±ÄŸÄ± Ã¶n iÅŸleme adÄ±mlarÄ±nÄ± saklamak iÃ§in list
 
-        // RectangleSelector sınıfı, kullanıcıların resim üzerinde dikdörtgen seçim yapmasına olanak tanır.
+        // RectangleSelector sÄ±nÄ±fÄ±, kullanÄ±cÄ±larÄ±n resim Ã¼zerinde dikdÃ¶rtgen seÃ§im yapmasÄ±na olanak tanÄ±r.
         private RectangleSelector selector;
         public Form1()
         {
             InitializeComponent();
 
-            // görüntü kutumun içindeki eventleri dinleyerek güncelliyorum
+            // gÃ¶rÃ¼ntÃ¼ kutumun iÃ§indeki eventleri dinleyerek gÃ¼ncelliyorum
             selector = new RectangleSelector(upload_picBox);
 
-            // Başlangıç için default ön işleme değerlerini atıyoruz
+            // BaÅŸlangÄ±Ã§ iÃ§in default Ã¶n iÅŸleme deÄŸerlerini atÄ±yoruz
             customParams = new CustomPreprocessParams
             {
                 Bluring = new BlurringParams
@@ -73,7 +73,7 @@ namespace image_to_text
                 Edge = new EdgeParams
                 {
 
-                    KernelShape = edg_ksize_nud.Value, // Varsayılan değer
+                    KernelShape = edg_ksize_nud.Value, // VarsayÄ±lan deÄŸer
 
                     Name = null
                 },
@@ -102,45 +102,45 @@ namespace image_to_text
         }
 
         /// <summary>
-        /// Verilen resim yolundan resmi okuyup yükler, ilgili görsel bilgilerini günceller
-        /// ve PictureBox'ta görüntüler.
+        /// Verilen resim yolundan resmi okuyup yÃ¼kler, ilgili gÃ¶rsel bilgilerini gÃ¼nceller
+        /// ve PictureBox'ta gÃ¶rÃ¼ntÃ¼ler.
         /// </summary>
-        /// <param name="img_path">Yüklenecek resmin dosya yolu.</param>
-        /// <param name="img_info">Resim ile ilişkili bilgi (örneğin buton etiketi).</param>
+        /// <param name="img_path">YÃ¼klenecek resmin dosya yolu.</param>
+        /// <param name="img_info">Resim ile iliÅŸkili bilgi (Ã¶rneÄŸin buton etiketi).</param>
         private void read_and_set_img(string img_path, string img_info)
         {
-            // Seçilen resim dosyasının yüklüyoruz
+            // SeÃ§ilen resim dosyasÄ±nÄ±n yÃ¼klÃ¼yoruz
             img = util.setChosenImage(img_path);
 
-            // Seçilen resim bilgisini güncelleme
+            // SeÃ§ilen resim bilgisini gÃ¼ncelleme
             util.setImgBtnClick(img_info);
 
-            // görüntüyü tam sığdımak için otomatik boyutlandırma ve PictureBox'a atıyorum
-            upload_picBox.SizeMode = PictureBoxSizeMode.Zoom; // Görüntüyü tam sığdırmak için otomatik boyutlandırma
+            // gÃ¶rÃ¼ntÃ¼yÃ¼ tam sÄ±ÄŸdÄ±mak iÃ§in otomatik boyutlandÄ±rma ve PictureBox'a atÄ±yorum
+            upload_picBox.SizeMode = PictureBoxSizeMode.Zoom; // GÃ¶rÃ¼ntÃ¼yÃ¼ tam sÄ±ÄŸdÄ±rmak iÃ§in otomatik boyutlandÄ±rma
             upload_picBox.Image = BitmapConverter.ToBitmap(img);
         }
 
 
         /// <summary>
-        /// Uygulanan ve geçici olan ön işleme adımlarını ListBox'ta listeler.
+        /// Uygulanan ve geÃ§ici olan Ã¶n iÅŸleme adÄ±mlarÄ±nÄ± ListBox'ta listeler.
         /// </summary>
         private void UpdateListBox()
         {
-            listBox1.Items.Clear(); // Önce liste kutusunu temizle
+            listBox1.Items.Clear(); // Ã–nce liste kutusunu temizle
 
-            // Eğer kullanıcı tarafından onaylanan işlemler varsa, bunları listeleriz
+            // EÄŸer kullanÄ±cÄ± tarafÄ±ndan onaylanan iÅŸlemler varsa, bunlarÄ± listeleriz
             if (appliedSteps.Any())
             {
-                listBox1.Items.Add("Onaylanmış Yöntemler:");
+                listBox1.Items.Add("OnaylanmÄ±ÅŸ YÃ¶ntemler:");
 
                 foreach (var step in appliedSteps)
                 {
-                    // İşlem adı ve türü ilk olarak yazdırılır
+                    // Ä°ÅŸlem adÄ± ve tÃ¼rÃ¼ ilk olarak yazdÄ±rÄ±lÄ±r
                     listBox1.Items.Add($"Name: {step.Name}");
                     listBox1.Items.Add($"Type: {step.Type}");
 
-                    // Diğer tüm özellikler (parametreler) yazdırılır
-                    // "Name" ve "Type" dışındakiler
+                    // DiÄŸer tÃ¼m Ã¶zellikler (parametreler) yazdÄ±rÄ±lÄ±r
+                    // "Name" ve "Type" dÄ±ÅŸÄ±ndakiler
                     if (step is BlurringParams blur)
                     {
                         listBox1.Items.Add($"FilterShape: {blur.FilterShape}");
@@ -158,23 +158,23 @@ namespace image_to_text
                         listBox1.Items.Add($"Iterations: {morph.Iterations}");
                     }
 
-                    listBox1.Items.Add(""); // Her adım sonunda boş satır bırak
+                    listBox1.Items.Add(""); // Her adÄ±m sonunda boÅŸ satÄ±r bÄ±rak
                 }
             }
 
-            // Eğer kullanıcı bir işlem seçmiş ama onaylamamışsa, geçici hali de gösterilir
+            // EÄŸer kullanÄ±cÄ± bir iÅŸlem seÃ§miÅŸ ama onaylamamÄ±ÅŸsa, geÃ§ici hali de gÃ¶sterilir
             if (!string.IsNullOrEmpty(preproccesMethod))
             {
                 var currentStep = customParams.GetByName(preproccesMethod);
 
-                listBox1.Items.Add("Önizleme (Onaylanmadı):");
+                listBox1.Items.Add("Ã–nizleme (OnaylanmadÄ±):");
 
                 if (currentStep != null)
                 {
                     listBox1.Items.Add($"Name: {currentStep.Name}");
                     listBox1.Items.Add($"Type: {currentStep.Type}");
 
-                    // Geçici adımın parametrelerini yazdır
+                    // GeÃ§ici adÄ±mÄ±n parametrelerini yazdÄ±r
                     if (currentStep is BlurringParams blur)
                     {
                         listBox1.Items.Add($"FilterShape: {blur.FilterShape}");
@@ -196,11 +196,11 @@ namespace image_to_text
         }
 
         /// <summary>
-        /// Tüm ön işleme parametrelerini varsayılan değerlere sıfırlar.
+        /// TÃ¼m Ã¶n iÅŸleme parametrelerini varsayÄ±lan deÄŸerlere sÄ±fÄ±rlar.
         /// </summary>
         private void SetPrepreccesStepsDefault()
         {
-            // ayarları varsayalına dönüştüyorum
+            // ayarlarÄ± varsayalÄ±na dÃ¶nÃ¼ÅŸtÃ¼yorum
             mrflj_iteration_nud.Value = 1;
             mrflj_fltr_hgt_nud.Value = 1;
             mrflj_fltr_wdth_nud.Value = 1;
@@ -231,13 +231,13 @@ namespace image_to_text
         }
 
         /// <summary>
-        /// Onaylanmış görüntü üzerinden geçici ön işleme adımını uygular ve sonucu görüntüler.
+        /// OnaylanmÄ±ÅŸ gÃ¶rÃ¼ntÃ¼ Ã¼zerinden geÃ§ici Ã¶n iÅŸleme adÄ±mÄ±nÄ± uygular ve sonucu gÃ¶rÃ¼ntÃ¼ler.
         /// </summary>
         private async void UpdatePreviewImage()
         {
             if (ApprovedImages.Count > 0)
             {
-                // sonsuz bir döngü oluşturduğum için ekranın kilitlenmemes için async fonksiyon kullandım. pictureBox'ı anlık güncelliyorum.
+                // sonsuz bir dÃ¶ngÃ¼ oluÅŸturduÄŸum iÃ§in ekranÄ±n kilitlenmemes iÃ§in async fonksiyon kullandÄ±m. pictureBox'Ä± anlÄ±k gÃ¼ncelliyorum.
                 Bitmap previewImage = await Task.Run(() =>
                 {
                     return paramOptimization.StartPreviewFrame(ApprovedImages[currentImageIndex], preproccesMethod, customParams);
@@ -268,17 +268,17 @@ namespace image_to_text
 
         private void custom_img_btn_Click(object sender, EventArgs e)
         {
-            // Kullanıcıdan özel bir resim seçmesini istiyoruz
+            // KullanÄ±cÄ±dan Ã¶zel bir resim seÃ§mesini istiyoruz
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.tiff",
                 Title = "Select an Image File"
             };
 
-            // eğer kullanıcı bir resim seçerse
+            // eÄŸer kullanÄ±cÄ± bir resim seÃ§erse
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // görüntünün yolunu belirliyoruz.
+                // gÃ¶rÃ¼ntÃ¼nÃ¼n yolunu belirliyoruz.
                 string imgPath = openFileDialog.FileName;
                 read_and_set_img(imgPath, "custom");
 
@@ -286,97 +286,97 @@ namespace image_to_text
         }
         private void onayla_btn_Click(object sender, EventArgs e)
         {
-            // seçilen resim butonuna ait bilgiyi al
+            // seÃ§ilen resim butonuna ait bilgiyi al
             string secilenBtn = util.getImgBtnClicked();
 
-            // Eğer görüntü seçiliyse
+            // EÄŸer gÃ¶rÃ¼ntÃ¼ seÃ§iliyse
             if (secilenBtn != "none")
             {
-                // kişi resim üzerinde kırpma işlemi yapmışsa bu görüntüyü kırpıp dönderiyorum kırpılmamışsa aynı görüntü dönderir.
+                // kiÅŸi resim Ã¼zerinde kÄ±rpma iÅŸlemi yapmÄ±ÅŸsa bu gÃ¶rÃ¼ntÃ¼yÃ¼ kÄ±rpÄ±p dÃ¶nderiyorum kÄ±rpÄ±lmamÄ±ÅŸsa aynÄ± gÃ¶rÃ¼ntÃ¼ dÃ¶nderir.
                 Mat processedImg = util.CropImage(img, selector);
-                Mat rawCopy = processedImg.Clone(); // görselin kopyasını alıyorum, böylece orijinal görüntüye dokunmadan işlem yapabilirim
+                Mat rawCopy = processedImg.Clone(); // gÃ¶rselin kopyasÄ±nÄ± alÄ±yorum, bÃ¶ylece orijinal gÃ¶rÃ¼ntÃ¼ye dokunmadan iÅŸlem yapabilirim
 
-                // Onaylanan resimlerin listesini güncelliyorum
+                // Onaylanan resimlerin listesini gÃ¼ncelliyorum
                 util.AddApprovedImage(processedImg, ApprovedImages);
-                // Onaylanan resimleri birleştiriyorum ve 1 görsel elde ediyorum.
+                // Onaylanan resimleri birleÅŸtiriyorum ve 1 gÃ¶rsel elde ediyorum.
                 Mat mixedImg = util.CombineImagesHorizontally(ApprovedImages);
 
-                // görüntüyü tam sığdımak için otomatik boyutlandırma ve PictureBox'a atıyorum
+                // gÃ¶rÃ¼ntÃ¼yÃ¼ tam sÄ±ÄŸdÄ±mak iÃ§in otomatik boyutlandÄ±rma ve PictureBox'a atÄ±yorum
                 approvedImg_picbox.SizeMode = PictureBoxSizeMode.Zoom;
                 approvedImg_picbox.Image = BitmapConverter.ToBitmap(mixedImg);
 
 
 
-                // ocr için hazır olmayan görselleri ham görseli UnReadyImages listesine ekliyorum
+                // ocr iÃ§in hazÄ±r olmayan gÃ¶rselleri ham gÃ¶rseli UnReadyImages listesine ekliyorum
                 UnReadyImages.Add(rawCopy);
-                // ocr için hazır olmayan görselleri birleştiriyorum ve 1 görsel elde ediyorum.
+                // ocr iÃ§in hazÄ±r olmayan gÃ¶rselleri birleÅŸtiriyorum ve 1 gÃ¶rsel elde ediyorum.
                 Mat mixedImg2 = util.CombineImagesHorizontally(UnReadyImages);
 
-                // görüntüyü tam sığdımak için otomatik boyutlandırma ve PictureBox'a atıyorum
+                // gÃ¶rÃ¼ntÃ¼yÃ¼ tam sÄ±ÄŸdÄ±mak iÃ§in otomatik boyutlandÄ±rma ve PictureBox'a atÄ±yorum
                 unreadyImg_picbox.SizeMode = PictureBoxSizeMode.Zoom;
                 unreadyImg_picbox.Image = BitmapConverter.ToBitmap(mixedImg2);
 
 
 
 
-                // ilk başta seçim yapıldığında prewierImageBoxa atama yapıyorum
+                // ilk baÅŸta seÃ§im yapÄ±ldÄ±ÄŸÄ±nda prewierImageBoxa atama yapÄ±yorum
                 currentImg_picbox.SizeMode = PictureBoxSizeMode.Zoom;
                 currentImg_picbox.Image = BitmapConverter.ToBitmap(ApprovedImages[currentImageIndex]);
 
 
 
-                // görüntü eklendiğinde upload_picBox otomatik sıfırlansın 
+                // gÃ¶rÃ¼ntÃ¼ eklendiÄŸinde upload_picBox otomatik sÄ±fÄ±rlansÄ±n 
                 upload_picBox.Image?.Dispose();
                 upload_picBox.Image = null;
                 util.setImgBtnClick("none");
 
             }
-            // Eğer kullanıcı bir resim seçmemişse, kullanıcıya bir mesaj gösteriyoruz
+            // EÄŸer kullanÄ±cÄ± bir resim seÃ§memiÅŸse, kullanÄ±cÄ±ya bir mesaj gÃ¶steriyoruz
             else
             {
-                MessageBox.Show("Lütfen bir resim seçin.");
+                MessageBox.Show("Please choose an image.");
             }
         }
         private void img_to_text_btn_Click(object sender, EventArgs e)
         {
-            // her OCR işlemi için bu butona basıldığında, sonuçları temizleyerek yeni görüntülerden elde edilen metinleri temiz şekilde başlatıyoruz
+            // her OCR iÅŸlemi iÃ§in bu butona basÄ±ldÄ±ÄŸÄ±nda, sonuÃ§larÄ± temizleyerek yeni gÃ¶rÃ¼ntÃ¼lerden elde edilen metinleri temiz ÅŸekilde baÅŸlatÄ±yoruz
             result_txt_box.Text = "";
 
-            // Seçilen resme ait bilgiyi alıyoruz
+            // SeÃ§ilen resme ait bilgiyi alÄ±yoruz
             string secilenBtn = util.getImgBtnClicked();
 
-            // Eğer kullanıcı herhangi bir resmi onaylamadıysa kullanıcıya bir mesaj gösteriyoruz
+            // EÄŸer kullanÄ±cÄ± herhangi bir resmi onaylamadÄ±ysa kullanÄ±cÄ±ya bir mesaj gÃ¶steriyoruz
             if (ApprovedImages.Count == 0)
             {
-                MessageBox.Show("Lütfen bir resim seçin ve onaylayın.");
-                return; // Eğer kullanıcı bir resim seçmemişse, işlemi sonlandırıyoruz
+                MessageBox.Show("Please select an image and confirm.");
+                return; // EÄŸer kullanÄ±cÄ± bir resim seÃ§memiÅŸse, iÅŸlemi sonlandÄ±rÄ±yoruz
             }
 
-            // Eğer kullanıcı resim onayladıysa, onaylanan resimler üzerinde işlemler yaparak OCR  çıktısını alıyoruz
+            // EÄŸer kullanÄ±cÄ± resim onayladÄ±ysa, onaylanan resimler Ã¼zerinde iÅŸlemler yaparak OCR  Ã§Ä±ktÄ±sÄ±nÄ± alÄ±yoruz
             else
             {
                 String text;
 
-                // Onaylanan her bir görüntü için
+                // Onaylanan her bir gÃ¶rÃ¼ntÃ¼ iÃ§in
                 for (int i = 0; i < ApprovedImages.Count; i++)
                 {
-                    // Onaylanan her resim ve ona ait kaynak bilgilerini alıyoruz
+                    // Onaylanan her resim ve ona ait kaynak bilgilerini alÄ±yoruz
                     var currentImg = ApprovedImages[i];
 
 
                     OcrResult ocrResult = new OcrResult();
-                    //OCR sonuçlarını metin olarak alıyoruz.
+                    //OCR sonuÃ§larÄ±nÄ± metin olarak alÄ±yoruz.
 
                     text = ocrResult.GetOcrResult(currentImg);
 
-                    // eğer birden fazla görüntüden metin alındıysa, metinleri birleştiriyoruz
+                    // eÄŸer birden fazla gÃ¶rÃ¼ntÃ¼den metin alÄ±ndÄ±ysa, metinleri birleÅŸtiriyoruz
 
-                    OrcResult += "------------------------Bir Sonraki Resim-----------------------\n" + text;
+                    OrcResult += "------------------------Next Image-----------------------\n" + text;
                 }
             }
 
-            result_txt_box.Text = OrcResult; // İşlenmiş metni TextBox'a yazdır
-            OrcResult = ""; // OCR sonuçlarını temizle. Yeni bir işlem yaptığında var olan metinlerin üzerine yazılmasını engellemek için.
+            result_txt_box.Text = OrcResult; // Ä°ÅŸlenmiÅŸ metni TextBox'a yazdÄ±r
+            OrcResult = ""; // OCR sonuÃ§larÄ±nÄ± temizle. Yeni bir iÅŸlem yaptÄ±ÄŸÄ±nda var olan metinlerin Ã¼zerine yazÄ±lmasÄ±nÄ± engellemek iÃ§in.
         }
         private void onIsleme_combobx_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -388,16 +388,16 @@ namespace image_to_text
 
             if (ApprovedImages.Count > 0)
             {
-                // seçilen ön işleme adımını al
+                // seÃ§ilen Ã¶n iÅŸleme adÄ±mÄ±nÄ± al
                 preproccesMethod = onIsleme_combobx.SelectedItem?.ToString();
 
-                // Tüm grup kutularını gizle (önce sıfırla)
+                // TÃ¼m grup kutularÄ±nÄ± gizle (Ã¶nce sÄ±fÄ±rla)
                 setGroupBoxesDefault();
 
-                // Onayla butonunu göster ve yerini ayarla (default)
+                // Onayla butonunu gÃ¶ster ve yerini ayarla (default)
                 onisleme_kydt_btn.Visible = true;
 
-                // Önişleme adımına göre ayarlamalar
+                // Ã–niÅŸleme adÄ±mÄ±na gÃ¶re ayarlamalar
                 switch (preproccesMethod)
                 {
                     case "Morphological Operations":
@@ -435,13 +435,13 @@ namespace image_to_text
                         break;
                 }
 
-                // Önizleme ve liste güncelle
+                // Ã–nizleme ve liste gÃ¼ncelle
                 UpdatePreviewImage();
                 UpdateListBox();
             }
             else
             {
-                MessageBox.Show("Lütfen Custom Resim Seçin ve Onaylayın");
+                MessageBox.Show("Please select an image and confirm");
             }
 
         }
@@ -449,7 +449,7 @@ namespace image_to_text
 
         private void onisleme_kydt_btn_Click_1(object sender, EventArgs e)
         {
-            // kaydet butonuna basıldığında ekrandaki bilglileri alıp atama işlemi yapar ve appliedSteps dizimin içerisinde onaylanan her bir ön işleme adımını tutar.
+            // kaydet butonuna basÄ±ldÄ±ÄŸÄ±nda ekrandaki bilglileri alÄ±p atama iÅŸlemi yapar ve appliedSteps dizimin iÃ§erisinde onaylanan her bir Ã¶n iÅŸleme adÄ±mÄ±nÄ± tutar.
             if (ApprovedImages.Count > 0)
             {
                 
@@ -530,54 +530,54 @@ namespace image_to_text
 
                 else
                 {
-                    MessageBox.Show("Lütfen geçerli bir işlem seçiniz.");
+                    MessageBox.Show("Please choose a valid preprocces method.");
                     return;
                 }
 
 
 
-                // Seçilen önişleme adımını alıyorum
+                // SeÃ§ilen Ã¶niÅŸleme adÄ±mÄ±nÄ± alÄ±yorum
                 var step = customParams.GetByName(preproccesMethod);
-                // Eğer listede görüntü varsa, o görüntüyü alıp onun üzerine işlem yapıyorum
+                // EÄŸer listede gÃ¶rÃ¼ntÃ¼ varsa, o gÃ¶rÃ¼ntÃ¼yÃ¼ alÄ±p onun Ã¼zerine iÅŸlem yapÄ±yorum
                 if (ApprovedImages.Count > 0)
                 {
 
-                    // Mevcut görüntünün referansını al
+                    // Mevcut gÃ¶rÃ¼ntÃ¼nÃ¼n referansÄ±nÄ± al
                     var currentImage = ApprovedImages[currentImageIndex];
 
-                    // İşlemi uygula (referansla)
+                    // Ä°ÅŸlemi uygula (referansla)
                     paramOptimization.ApplyStep(step, ref currentImage);
 
-                    // Listeyi güncelle (gerekirse)
+                    // Listeyi gÃ¼ncelle (gerekirse)
                     ApprovedImages[currentImageIndex] = currentImage;
                 }
 
 
 
-                // Preview başlat
+                // Preview baÅŸlat
                 Bitmap previewImage = paramOptimization.StartPreviewFrame(ApprovedImages[currentImageIndex], preproccesMethod, customParams);
 
-                // UI thread'inde güncelle
+                // UI thread'inde gÃ¼ncelle
                 currentImg_picbox.Image?.Dispose();
                 currentImg_picbox.SizeMode = PictureBoxSizeMode.Zoom;
                 currentImg_picbox.Image = previewImage;
 
 
 
-                // onaylanan picBox'u güncelliyorum
+                // onaylanan picBox'u gÃ¼ncelliyorum
                 Mat mixedImg = util.CombineImagesHorizontally(ApprovedImages);
 
                 approvedImg_picbox.Image?.Dispose();
                 approvedImg_picbox.SizeMode = PictureBoxSizeMode.Zoom;
                 approvedImg_picbox.Image = BitmapConverter.ToBitmap(mixedImg);
 
-                UpdateListBox(); // Listeyi güncelle
-                // her  onayla işleminden sonra ön işleme parametrelerini varsayılana dönderiyiorum
+                UpdateListBox(); // Listeyi gÃ¼ncelle
+                // her  onayla iÅŸleminden sonra Ã¶n iÅŸleme parametrelerini varsayÄ±lana dÃ¶nderiyiorum
                 SetPrepreccesStepsDefault();
             }
             else
             {
-                MessageBox.Show("Lütfen Resim Seçin ve Onaylayın");
+                MessageBox.Show("Please Select Image and Confirm");
             }
 
         }
@@ -585,18 +585,18 @@ namespace image_to_text
 
         private void cln_img_Click(object sender, EventArgs e)
         {
-            ApprovedImages.Clear(); // Kırpılmış resimleri temizle
-            UnReadyImages.Clear(); // Onaylanmamış resimleri temizle
-            upload_picBox.Image = null; // yüklenen resmi temizle
+            ApprovedImages.Clear(); // KÄ±rpÄ±lmÄ±ÅŸ resimleri temizle
+            UnReadyImages.Clear(); // OnaylanmamÄ±ÅŸ resimleri temizle
+            upload_picBox.Image = null; // yÃ¼klenen resmi temizle
             unreadyImg_picbox.Image = null; // onaylanan resmi temizle
             result_txt_box.Text = ""; // TextBox'taki metni temizle
-            OrcResult = ""; // OCR sonuçlarını temizle
-            util.setImgBtnClick("none"); // Seçilen resim butonunu ait bilgiyi güncelliyoruz
-            currentImg_picbox.Image = null; // Preview görüntüsünü temizle
+            OrcResult = ""; // OCR sonuÃ§larÄ±nÄ± temizle
+            util.setImgBtnClick("none"); // SeÃ§ilen resim butonunu ait bilgiyi gÃ¼ncelliyoruz
+            currentImg_picbox.Image = null; // Preview gÃ¶rÃ¼ntÃ¼sÃ¼nÃ¼ temizle
             approvedImg_picbox.Image = null;
-            onIsleme_combobx.SelectedIndex = -1; // Ön işleme combobox'ını sıfırla
+            onIsleme_combobx.SelectedIndex = -1; // Ã–n iÅŸleme combobox'Ä±nÄ± sÄ±fÄ±rla
             currentImageIndex = 0;
-            setGroupBoxesDefault(); // Grup kutularını varsayılana döndür
+            setGroupBoxesDefault(); // Grup kutularÄ±nÄ± varsayÄ±lana dÃ¶ndÃ¼r
             SetPrepreccesStepsDefault();
 
         }
@@ -605,7 +605,7 @@ namespace image_to_text
 
         private void mrflj_fltr_wdth_nud_ValueChanged(object sender, EventArgs e)
         {
-            // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+            // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
             customParams.Morphological.FilterW = mrflj_fltr_wdth_nud.Value;
             UpdateListBox();
             UpdatePreviewImage();
@@ -615,7 +615,7 @@ namespace image_to_text
 
         private async void mrflj_iteration_nud_ValueChanged(object sender, EventArgs e)
         {
-            // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+            // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
             customParams.Morphological.Iterations = mrflj_iteration_nud.Value;
             UpdateListBox();
             UpdatePreviewImage();
@@ -624,7 +624,7 @@ namespace image_to_text
 
         private async void mrflj_fltr_hgt_nud_ValueChanged(object sender, EventArgs e)
         {
-            // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+            // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
             customParams.Morphological.FilterH = mrflj_fltr_hgt_nud.Value;
             UpdateListBox();
             UpdatePreviewImage();
@@ -635,7 +635,7 @@ namespace image_to_text
         {
             if (mrflj_erodion_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
                 customParams.Morphological.Type = "erodion";
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -647,7 +647,7 @@ namespace image_to_text
         {
             if (mrflj_dilation_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
                 customParams.Morphological.Type = "dilation";
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -659,7 +659,7 @@ namespace image_to_text
         {
             if (mrflj_opening_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
                 customParams.Morphological.Type = "opening";
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -671,7 +671,7 @@ namespace image_to_text
         {
             if (mrflj_closing_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
                 customParams.Morphological.Type = "closing";
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -681,7 +681,7 @@ namespace image_to_text
 
         private void thrs_adptv_krnlSize_nud_ValueChanged(object sender, EventArgs e)
         {
-            // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+            // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
             customParams.Threshold.KernelShape = thrs_adptv_krnlSize_nud.Value;
             UpdateListBox();
             UpdatePreviewImage();
@@ -690,7 +690,7 @@ namespace image_to_text
 
         private void thrs_adptv_cValue_nud_ValueChanged(object sender, EventArgs e)
         {
-            // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+            // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
             customParams.Threshold.CValue = thrs_adptv_cValue_nud.Value;
             UpdateListBox();
             UpdatePreviewImage();
@@ -698,7 +698,7 @@ namespace image_to_text
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+            // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
             customParams.Threshold.MinThreshValue = thrs_min_value_nud.Value;
             UpdateListBox();
             UpdatePreviewImage();
@@ -708,11 +708,11 @@ namespace image_to_text
         {
             if (thrshold_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum ve alaksaız olan diğer parametrelerin görünürlüğünü güncelliyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum ve alaksaÄ±z olan diÄŸer parametrelerin gÃ¶rÃ¼nÃ¼rlÃ¼ÄŸÃ¼nÃ¼ gÃ¼ncelliyorum
                 thrs_min_value_nud.Enabled = true;
                 thrs_adptv_cValue_nud.Enabled = false;
                 thrs_adptv_krnlSize_nud.Enabled = false;
-                thrs_metod_gaussian_rdbx.Enabled = false; // adaptive threshold seçildiğinde diğer seçenekleri devre dışı bırakıyorum
+                thrs_metod_gaussian_rdbx.Enabled = false; // adaptive threshold seÃ§ildiÄŸinde diÄŸer seÃ§enekleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
                 thrs_metod_mean_rdbx.Enabled = false;
 
                 customParams.Threshold.Type = "threshold";
@@ -729,11 +729,11 @@ namespace image_to_text
         {
             if (adaptive_thrshold_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum ve alaksaız olan diğer parametrelerin görünürlüğünü güncelliyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum ve alaksaÄ±z olan diÄŸer parametrelerin gÃ¶rÃ¼nÃ¼rlÃ¼ÄŸÃ¼nÃ¼ gÃ¼ncelliyorum
                 thrs_min_value_nud.Enabled = false;
                 thrs_adptv_cValue_nud.Enabled = true;
                 thrs_adptv_krnlSize_nud.Enabled = true;
-                thrs_metod_gaussian_rdbx.Enabled = true; // adaptive threshold seçildiğinde diğer seçenekleri devre dışı bırakıyorum
+                thrs_metod_gaussian_rdbx.Enabled = true; // adaptive threshold seÃ§ildiÄŸinde diÄŸer seÃ§enekleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
                 thrs_metod_mean_rdbx.Enabled = true;
 
 
@@ -750,19 +750,19 @@ namespace image_to_text
 
         private void bitwise_thrshold_chckBx_CheckedChanged(object sender, EventArgs e)
         {
-            customParams.Threshold.Isbitwise = bitwise_thrshold_chckBx.Checked; // Bitwise threshold seçildiğinde bu metodu kullanacak şekilde parametreyi ayarlıyorum
+            customParams.Threshold.Isbitwise = bitwise_thrshold_chckBx.Checked; // Bitwise threshold seÃ§ildiÄŸinde bu metodu kullanacak ÅŸekilde parametreyi ayarlÄ±yorum
             UpdatePreviewImage();
         }
 
         private void thrs_metod_gaussian_rdbx_CheckedChanged(object sender, EventArgs e)
         {
-            customParams.Threshold.Method = "gaussian"; // Gaussian method seçildiğinde bu metodu kullanacak şekilde parametreyi ayarlıyorum
+            customParams.Threshold.Method = "gaussian"; // Gaussian method seÃ§ildiÄŸinde bu metodu kullanacak ÅŸekilde parametreyi ayarlÄ±yorum
             UpdatePreviewImage();
         }
 
         private void thrs_metod_mean_rdbx_CheckedChanged(object sender, EventArgs e)
         {
-            customParams.Threshold.Method = "mean"; // Mean method seçildiğinde bu metodu kullanacak şekilde parametreyi ayarlıyorum
+            customParams.Threshold.Method = "mean"; // Mean method seÃ§ildiÄŸinde bu metodu kullanacak ÅŸekilde parametreyi ayarlÄ±yorum
             UpdatePreviewImage();
         }
 
@@ -771,11 +771,11 @@ namespace image_to_text
         {
             if (otsu_thrshold_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum ve alaksaız olan diğer parametrelerin görünürlüğünü güncelliyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum ve alaksaÄ±z olan diÄŸer parametrelerin gÃ¶rÃ¼nÃ¼rlÃ¼ÄŸÃ¼nÃ¼ gÃ¼ncelliyorum
                 thrs_min_value_nud.Enabled = false;
                 thrs_adptv_cValue_nud.Enabled = false;
                 thrs_adptv_krnlSize_nud.Enabled = false;
-                thrs_metod_gaussian_rdbx.Enabled = false; // adaptive threshold seçildiğinde diğer seçenekleri devre dışı bırakıyorum
+                thrs_metod_gaussian_rdbx.Enabled = false; // adaptive threshold seÃ§ildiÄŸinde diÄŸer seÃ§enekleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
                 thrs_metod_mean_rdbx.Enabled = false;
 
                 customParams.Threshold.Type = "otsu threshold";
@@ -793,7 +793,7 @@ namespace image_to_text
         {
             if (blr_gaussen_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
                 customParams.Bluring.Type = "gaussen";
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -804,7 +804,7 @@ namespace image_to_text
         {
             if (blr_median_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
                 customParams.Bluring.Type = "median";
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -815,7 +815,7 @@ namespace image_to_text
         {
             if (blr_blur_rdbtn.Checked)
             {
-                // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+                // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
                 customParams.Bluring.Type = "blur";
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -824,7 +824,7 @@ namespace image_to_text
 
         private void blr_filter_shape_nud_ValueChanged(object sender, EventArgs e)
         {
-            // ilgili parametre değiştiğinde otomatik görüntüye uygulatıp ekranda gösteriyorum
+            // ilgili parametre deÄŸiÅŸtiÄŸinde otomatik gÃ¶rÃ¼ntÃ¼ye uygulatÄ±p ekranda gÃ¶steriyorum
             customParams.Bluring.FilterShape = blr_filter_shape_nud.Value;
             UpdateListBox();
             UpdatePreviewImage();
@@ -833,7 +833,7 @@ namespace image_to_text
 
         private void nextImg_btn_Click(object sender, EventArgs e)
         {
-            // bir sonraki görüntü seçildiğinde imageindex'i artırıp ekranda güncelleme işlemi yapıyorum
+            // bir sonraki gÃ¶rÃ¼ntÃ¼ seÃ§ildiÄŸinde imageindex'i artÄ±rÄ±p ekranda gÃ¼ncelleme iÅŸlemi yapÄ±yorum
             if (currentImg_picbox.Image != null)
             {
                 if (currentImageIndex < ApprovedImages.Count - 1)
@@ -847,7 +847,7 @@ namespace image_to_text
 
         private void previousImg_btn_Click(object sender, EventArgs e)
         {
-            // bir sonraki görüntü seçildiğinde imageindex'i azaltarak bir önceki resmi göstermesini sağlıyorum 
+            // bir sonraki gÃ¶rÃ¼ntÃ¼ seÃ§ildiÄŸinde imageindex'i azaltarak bir Ã¶nceki resmi gÃ¶stermesini saÄŸlÄ±yorum 
             if (currentImg_picbox.Image != null)
             {
                 if (currentImageIndex > 0)
@@ -868,13 +868,13 @@ namespace image_to_text
                 ApprovedImages.RemoveAt(currentImageIndex);
                 UnReadyImages.RemoveAt(currentImageIndex);
 
-                // Eğer currentImageIndex artık liste sınırları dışındaysa bir geri git
+                // EÄŸer currentImageIndex artÄ±k liste sÄ±nÄ±rlarÄ± dÄ±ÅŸÄ±ndaysa bir geri git
                 if (currentImageIndex >= ApprovedImages.Count)
                 {
                     currentImageIndex = ApprovedImages.Count - 1;
 
                 }
-                // Liste boşaldıysa görüntüyü temizle
+                // Liste boÅŸaldÄ±ysa gÃ¶rÃ¼ntÃ¼yÃ¼ temizle
                 if (ApprovedImages.Count == 0)
                 {
                     currentImg_picbox.Image?.Dispose();
@@ -887,8 +887,8 @@ namespace image_to_text
                     approvedImg_picbox.Image?.Dispose();
                     approvedImg_picbox.Image = null;
 
-                    onIsleme_combobx.SelectedIndex = -1; // Ön işleme combobox'ını sıfırla
-                    setGroupBoxesDefault(); // Grup kutularını varsayılan duruma getir
+                    onIsleme_combobx.SelectedIndex = -1; // Ã–n iÅŸleme combobox'Ä±nÄ± sÄ±fÄ±rla
+                    setGroupBoxesDefault(); // Grup kutularÄ±nÄ± varsayÄ±lan duruma getir
 
                     return;
                 }
@@ -906,8 +906,8 @@ namespace image_to_text
 
         private void clip_limit_nud_ValueChanged(object sender, EventArgs e)
         {
-            customParams.Contrast.ClipLimit = clip_limit_nud.Value; // Tile grid size değiştiğinde parametreyi güncelle
-            customParams.Contrast.Type = "Clahe"; // Contrast işlemi için adını güncelle
+            customParams.Contrast.ClipLimit = clip_limit_nud.Value; // Tile grid size deÄŸiÅŸtiÄŸinde parametreyi gÃ¼ncelle
+            customParams.Contrast.Type = "Clahe"; // Contrast iÅŸlemi iÃ§in adÄ±nÄ± gÃ¼ncelle
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -915,8 +915,8 @@ namespace image_to_text
 
         private void tile_grid_size_nud_ValueChanged(object sender, EventArgs e)
         {
-            customParams.Contrast.GridSize = tile_grid_size_nud.Value; // Tile grid size değiştiğinde parametreyi güncelle
-            customParams.Contrast.Type = "Clahe"; // Contrast işlemi için adını güncelle
+            customParams.Contrast.GridSize = tile_grid_size_nud.Value; // Tile grid size deÄŸiÅŸtiÄŸinde parametreyi gÃ¼ncelle
+            customParams.Contrast.Type = "Clahe"; // Contrast iÅŸlemi iÃ§in adÄ±nÄ± gÃ¼ncelle
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -924,13 +924,13 @@ namespace image_to_text
 
         private void edg_laplacian_rdbtn_CheckedChanged(object sender, EventArgs e)
         {
-            edg_ksize_nud.Enabled = true; // Laplacian için kernel boyutunu etkinleştiriyorum
+            edg_ksize_nud.Enabled = true; // Laplacian iÃ§in kernel boyutunu etkinleÅŸtiriyorum
 
-            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
-            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
+            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
+            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
 
 
-            customParams.Edge.Type = "laplacian"; // Laplacian kenar algılama türünü ayarlıyorum
+            customParams.Edge.Type = "laplacian"; // Laplacian kenar algÄ±lama tÃ¼rÃ¼nÃ¼ ayarlÄ±yorum
 
 
             UpdateListBox();
@@ -941,13 +941,13 @@ namespace image_to_text
         private void edg_sobelX_rdbtn_CheckedChanged(object sender, EventArgs e)
         {
 
-            edg_ksize_nud.Enabled = true; // sobelX için kernel boyutunu etkinleştiriyorum
+            edg_ksize_nud.Enabled = true; // sobelX iÃ§in kernel boyutunu etkinleÅŸtiriyorum
 
-            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
-            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
+            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
+            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
 
 
-            customParams.Edge.Type = "sobelX"; // sobelX kenar algılama türünü ayarlıyorum
+            customParams.Edge.Type = "sobelX"; // sobelX kenar algÄ±lama tÃ¼rÃ¼nÃ¼ ayarlÄ±yorum
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -957,13 +957,13 @@ namespace image_to_text
         private void edg_sobelY_rdbtn_CheckedChanged(object sender, EventArgs e)
         {
 
-            edg_ksize_nud.Enabled = true; // sobelY için kernel boyutunu etkinleştiriyorum
+            edg_ksize_nud.Enabled = true; // sobelY iÃ§in kernel boyutunu etkinleÅŸtiriyorum
 
-            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
-            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
+            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
+            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
 
 
-            customParams.Edge.Type = "sobelY"; // sobelY kenar algılama türünü ayarlıyorum
+            customParams.Edge.Type = "sobelY"; // sobelY kenar algÄ±lama tÃ¼rÃ¼nÃ¼ ayarlÄ±yorum
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -972,13 +972,13 @@ namespace image_to_text
         private void edg_sobel_rdbtn_CheckedChanged(object sender, EventArgs e)
         {
 
-            edg_ksize_nud.Enabled = true; // sobel için kernel boyutunu etkinleştiriyorum
+            edg_ksize_nud.Enabled = true; // sobel iÃ§in kernel boyutunu etkinleÅŸtiriyorum
 
-            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
-            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dışı bırakıyorum
+            edg_cannyMaxThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
+            edg_cannyMinThrs_nud.Enabled = false; // Canny' e ait parametreleri devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
 
 
-            customParams.Edge.Type = "sobel"; // sobel kenar algılama türünü ayarlıyorum
+            customParams.Edge.Type = "sobel"; // sobel kenar algÄ±lama tÃ¼rÃ¼nÃ¼ ayarlÄ±yorum
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -986,11 +986,11 @@ namespace image_to_text
 
         private void edg_canny_rdbtn_CheckedChanged(object sender, EventArgs e)
         {
-            edg_ksize_nud.Enabled = false; // Canny için kernel boyutunu devre dışı bırakıyorum
-            edg_cannyMaxThrs_nud.Enabled = true; // Canny için maksimum eşik değerini etkinleştiriyorum
-            edg_cannyMinThrs_nud.Enabled = true; // Canny için minimum eşik değerini etkinleştiriyorum
+            edg_ksize_nud.Enabled = false; // Canny iÃ§in kernel boyutunu devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
+            edg_cannyMaxThrs_nud.Enabled = true; // Canny iÃ§in maksimum eÅŸik deÄŸerini etkinleÅŸtiriyorum
+            edg_cannyMinThrs_nud.Enabled = true; // Canny iÃ§in minimum eÅŸik deÄŸerini etkinleÅŸtiriyorum
 
-            customParams.Edge.Type = "canny"; // Canny kenar algılama türünü ayarlıyorum
+            customParams.Edge.Type = "canny"; // Canny kenar algÄ±lama tÃ¼rÃ¼nÃ¼ ayarlÄ±yorum
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -1001,7 +1001,7 @@ namespace image_to_text
 
         private void edg_ksize_nud_ValueChanged(object sender, EventArgs e)
         {
-            customParams.Edge.KernelShape = edg_ksize_nud.Value; // Kernel boyutunu ayarlıyorum
+            customParams.Edge.KernelShape = edg_ksize_nud.Value; // Kernel boyutunu ayarlÄ±yorum
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -1009,7 +1009,7 @@ namespace image_to_text
 
         private void edg_cannyMinThrs_nud_ValueChanged(object sender, EventArgs e)
         {
-            customParams.Edge.MinThrashold = edg_cannyMinThrs_nud.Value; // Canny minimum eşik değerini ayarlıyorum
+            customParams.Edge.MinThrashold = edg_cannyMinThrs_nud.Value; // Canny minimum eÅŸik deÄŸerini ayarlÄ±yorum
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -1019,7 +1019,7 @@ namespace image_to_text
         private void edg_cannyMaxThrs_nud_ValueChanged(object sender, EventArgs e)
         {
 
-            customParams.Edge.MaxThrashold = edg_cannyMaxThrs_nud.Value; // Canny maksimum eşik değerini ayarlıyorum
+            customParams.Edge.MaxThrashold = edg_cannyMaxThrs_nud.Value; // Canny maksimum eÅŸik deÄŸerini ayarlÄ±yorum
 
             UpdateListBox();
             UpdatePreviewImage();
@@ -1033,7 +1033,7 @@ namespace image_to_text
                 stdHoughP_grpbx.Enabled = true;
                 stdHoughC_grpbx.Enabled = false;
 
-                customParams.HoughTransform.Type = "houghP"; // Hough Transform türünü ayarlıyorum
+                customParams.HoughTransform.Type = "houghP"; // Hough Transform tÃ¼rÃ¼nÃ¼ ayarlÄ±yorum
 
                 UpdateListBox();
                 UpdatePreviewImage();
@@ -1047,7 +1047,7 @@ namespace image_to_text
 
         private void stdHoughL_thrs_nud_ValueChanged(object sender, EventArgs e)
         {
-            customParams.HoughTransform.Thrashold = stdHoughL_thrs_nud.Value; // Hough Transform için eşik değerini ayarlıyorum
+            customParams.HoughTransform.Thrashold = stdHoughL_thrs_nud.Value; // Hough Transform iÃ§in eÅŸik deÄŸerini ayarlÄ±yorum
 
 
             UpdateListBox();
@@ -1075,7 +1075,7 @@ namespace image_to_text
         {
             if (stdHough_circle_rdbtn.Checked)
             {
-                // Hough Circle seçildiğinde ilgili grup kutusunu etkinleştiriyorum ve diğerini devre dışı bırakıyorum
+                // Hough Circle seÃ§ildiÄŸinde ilgili grup kutusunu etkinleÅŸtiriyorum ve diÄŸerini devre dÄ±ÅŸÄ± bÄ±rakÄ±yorum
                 stdHoughP_grpbx.Enabled = false;
                 stdHoughC_grpbx.Enabled = true;
 
